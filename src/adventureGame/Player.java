@@ -3,7 +3,10 @@ package adventureGame;
 public class Player {
 	private String name = "";
 	private String gender = "";
-	private int sightDistance = 30;
+	// private int sightDistance = 30;
+	
+	private int xLocation = 0;
+	private int yLocation = 0; 
 
 	public Player() {
 		name = "Pat";
@@ -28,4 +31,22 @@ public class Player {
 		this.gender = g;
 	} // get name
 
+	// xLocation getter and setter
+	public int getX() {
+		return xLocation;
+	} // get X
+	
+	public void setX(int x) {
+		xLocation = x;
+	} // set X
+	
+	// yLocation getter and setter
+	public int getY() {
+		return yLocation;
+	} // get Y
+	
+	public void setY(int y) {
+		yLocation = y;
+	} // set Y
+	
 } // class
