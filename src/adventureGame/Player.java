@@ -13,6 +13,11 @@ public class Player {
 		gender = "X";
 	} // constructor
 
+	// Below allows the player to move around in the environment.
+	public void traverse() {
+		System.out.println("You moved!");
+	} // setLocation
+	
 	// Name getter and setter
 	public String getName() {
 		return name;

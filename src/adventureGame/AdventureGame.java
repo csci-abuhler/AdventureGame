@@ -6,6 +6,7 @@ public class AdventureGame {
 
 	private Map map;
 	private Player player;
+	private static Scanner sc = new Scanner(System.in);
 	
 	public AdventureGame() {
 		map = new Map(10, 10);
@@ -17,7 +18,6 @@ public class AdventureGame {
 		AdventureGame ag = new AdventureGame();
 		
 		String user = new String();
-		Scanner sc = new Scanner(System.in);
 		
 		do {
 	        System.out.println("What to do next?");
@@ -28,6 +28,13 @@ public class AdventureGame {
 	
 	public void selectChoice(String choice) {
 		switch (choice) {
+		case "move":
+			System.out.println("What direction?");
+			String direction = sc.next();
+			if (direction.equalsIgnoreCase("north")) {
+				player.traverse();
+			} // if
+			break;
 		case "exit":
 			exit();
 			break;
