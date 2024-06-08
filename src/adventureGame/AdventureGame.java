@@ -19,6 +19,7 @@ public class AdventureGame {
 		
 		String user = new String();
 		
+		// Game loot starts.
 		do {
 	        System.out.println("What to do next?");
 			user = sc.next();
@@ -28,11 +29,15 @@ public class AdventureGame {
 	
 	public void selectChoice(String choice) {
 		switch (choice) {
+		case "look":
+			System.out.println(player.getX());
+			System.out.println(player.getY());
+			break;
 		case "move":
 			System.out.println("What direction?");
 			String direction = sc.next();
 			if (direction.equalsIgnoreCase("north")) {
-				player.traverse();
+				player.setY(player.getX() - 1);
 			} // if
 			break;
 		case "exit":
